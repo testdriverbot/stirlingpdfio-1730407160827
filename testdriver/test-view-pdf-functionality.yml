@@ -1,0 +1,23 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "View PDF".
+    commands:
+      - command: hover-text
+        text: View PDF
+        description: button to view PDF
+        action: click
+  - prompt: Upload a sample PDF file.
+    commands:
+      - command: hover-image
+        description: open file icon in the PDF viewer toolbar
+        action: click
+  - prompt: Upload a sample PDF file.
+    commands:
+      - command: hover-image
+        description: open file icon in the PDF viewer toolbar
+        action: click
+  - prompt: Upload a sample PDF file.
+    commands:
+      - command: hover-image
+        description: open file icon in the PDF viewer toolbar
+        action: click
