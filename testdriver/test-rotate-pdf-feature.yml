@@ -1,0 +1,35 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Rotate".
+    commands:
+      - command: hover-text
+        text: Rotate
+        description: button to rotate PDFs
+        action: click
+  - prompt: Upload a sample PDF file.
+    commands:
+      - command: hover-text
+        text: Choose Files
+        description: button to open file dialog
+        action: click
+  - prompt: Upload a sample PDF file.
+    commands:
+      - command: type
+        text: sample.pdf
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: Upload a sample PDF file.
+    commands:
+      - command: hover-text
+        text: OK
+        description: button to close error message
+        action: click
+      - command: hover-text
+        text: Documents
+        description: folder to open documents
+        action: double-click
+      - command: hover-text
+        text: sample.pdf
+        description: file to select
+        action: double-click
