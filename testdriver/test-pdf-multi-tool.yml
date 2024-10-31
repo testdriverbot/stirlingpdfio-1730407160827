@@ -1,0 +1,45 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "PDF Multi Tool".
+    commands:
+      - command: hover-text
+        text: PDF Multi Tool
+        description: button for PDF Multi Tool
+        action: click
+      - command: hover-image
+        description: icon for PDF Multi Tool
+        action: click
+  - prompt: Assert that the PDF Multi Tool page or section is loaded.
+    commands:
+      - command: assert
+        expect: PDF Multi Tool is visible on the page
+  - prompt: Select options to merge and split a sample PDF.
+    commands:
+      - command: hover-image
+        description: merge icon
+        action: click
+      - command: hover-image
+        description: split icon
+        action: click
+  - prompt: Select options to merge and split a sample PDF.
+    commands:
+      - command: hover-text
+        text: Merge
+        description: merge option in PDF Multi Tool
+        action: click
+      - command: hover-text
+        text: Split
+        description: split option in PDF Multi Tool
+        action: click
+  - prompt: Select options to merge and split a sample PDF.
+    commands:
+      - command: hover-text
+        text: Merge
+        description: merge option in PDF Multi Tool
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Split
+        description: split option in PDF Multi Tool
+        action: click
