@@ -1,0 +1,37 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Pipeline".
+    commands:
+      - command: hover-text
+        text: Pipeline
+        description: link in the header
+        action: click
+  - prompt: Assert that the Pipeline page is displayed.
+    commands:
+      - command: assert
+        expect: the Pipeline Menu (Beta) page is displayed
+  - prompt: Create a new pipeline with predefined actions.
+    commands:
+      - command: hover-text
+        text: Configure
+        description: button to configure a new pipeline
+        action: click
+  - prompt: Create a new pipeline with predefined actions.
+    commands:
+      - command: type
+        text: MyPipeline
+      - command: press-keys
+        keys:
+          - tab
+      - command: type
+        text: resize
+      - command: hover-text
+        text: Add operation
+        description: button to add operation to the pipeline
+        action: click
+  - prompt: >-
+      Assert that the pipeline runs without errors.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the pipeline runs successfully without errors
