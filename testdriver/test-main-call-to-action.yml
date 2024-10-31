@@ -1,0 +1,14 @@
+version: 4.0.78
+steps:
+  - prompt: Click on "Upgrade to Pro".
+    commands:
+      - command: hover-text
+        text: UPGRADE TO PRO
+        description: button in the header
+        action: click
+  - prompt: >-
+      Assert that the pricing or sign-up page is displayed.  # Use the content
+      of the file from the environment
+    commands:
+      - command: assert
+        expect: Affordable plans for the most powerful PDF tools available
